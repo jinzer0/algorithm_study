@@ -16,22 +16,22 @@
 
 ## 소스 코드 및 파일 이름 작성법 ✏️
 - 소스 코드에 주석을 추가해서 다른 사람이 쉽게 이해할 수 있도록 하기
-- 이름/주차/몇번째문제   
+- 이름_주차_몇번째문제   
 예시
-> jinyeong/week2/3.c   
-> jinyeong/week1/2.py   
+> jinyeong_week2_3.c   
+> jinyeong_week1_2.py   
 
 ## `commit` 방법 ✏️
-- 이름/주차/몇번째문제/사용 언어
+- 이름_주차_몇번째문제_사용 언어
 예시
-> jinyeong/week5/3/python   
-> jinyeong/week3/2/c
+> jinyeong_week5_3_python   
+> jinyeong_week3_2_c
 
 ## `Pull Request` 방법 ✏️
 1. Github 홈페이지 `fork` 한 저장소에서 `Create pull request` 누르기
-2. 제목은 `이름/주차`로 하기
+2. 제목은 `이름_주차`로 하기
 -  제목 예시
-> jinyeong/week2
+> jinyeong_week2
 
 ## 코드 리뷰(코멘트) 방법 📝
 **가장 중요!! 자신의 실력을 발전시킬 수 있는 부분!! 꼭 하세요!!**
@@ -40,6 +40,8 @@
 - 의견, 궁금한 점 제시하기 (잘한 부분, 피드백 혹은 또 다른 방안 제시, 코드에 대해 궁금한 점 등)
 
 ## ~ 주차 문제 📚
-| 주차 | 문제 유형 | 문제 |
+| 주차 | 문제 유형 | 문제(순서대로 1~) |
 |:--:|:--:|:--:|
 |1|연습 문제|[수 정렬하기](https://www.acmicpc.net/problem/2750), [팰린드롬인지 확인하기](https://www.acmicpc.net/problem/10988), [피보나치 수 2](https://www.acmicpc.net/problem/2748), [소수 찾기](https://www.acmicpc.net/problem/2581)|
+
+## 하는 방법 자세히 ✏️
