@@ -10,12 +10,16 @@
 
 int main (void)
 {
-    long long list[max] = {0,};
+    long long list[max] = {0,}; //피보나치 수를 저장하는 배열
     int n, i;
-    list[0] = 1;
-    list[1] = 1;
+    list[0] = 1; //첫번째 피보나치 수
+    list[1] = 1; //두번째 피보나치 수
+
+    //1.
     scanf("%d", &n);
     if (n > 90) return 0;
+
+    //2. 
     for(i = 2; i < n; i++)
     {
         list[i] = list[i - 1] + list[i-2];

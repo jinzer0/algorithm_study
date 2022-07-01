@@ -20,8 +20,9 @@ int main (void)
     return 0;
 }
 
-int palindrome(char string[length])
+int palindrome(char string[length]) //맞을 경우 1, 아닐 경우 0 반환
 {
+    //가장 앞의 문자와 가장 뒤의 문자 비교 >> 거리를 좁혀가며 비교 >> 두 변수의 값이 일치하거나 front > back 인 경우 중단
     int front, back;
     front = 0;
     back = strlen(string) - 1;
@@ -35,5 +36,5 @@ int palindrome(char string[length])
         else
             return 0; //팰린드롬이 아닌 경우
     }
-    return 1;
+    return 1; // 맞는 경우
 }
