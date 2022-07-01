@@ -15,21 +15,18 @@ int main (void)
 {
     char str[length];
     int i;
-    scanf("%s", str);
-    printf("%d", palindrome(str));
+    scanf("%s", str); //단어 입력
+    printf("%d", palindrome(str)); //팰린드롬 검사 및 출력
     return 0;
 }
 
 int palindrome(char string[length]) //맞을 경우 1, 아닐 경우 0 반환
-{
-    //가장 앞의 문자와 가장 뒤의 문자 비교 >> 거리를 좁혀가며 비교 >> 두 변수의 값이 일치하거나 front > back 인 경우 중단
+{   //가장 앞의 문자와 가장 뒤의 문자 비교 >> 거리를 좁혀가며 비교 >> 두 변수의 값이 일치하거나 front > back 인 경우 중단
     int front, back;
     front = 0;
     back = strlen(string) - 1;
-    while (front < back)
-    {
-        if(string[front] == string[back])
-        {
+    while (front < back){
+        if(string[front] == string[back]){
             front = front + 1;
             back = back - 1;
         }
