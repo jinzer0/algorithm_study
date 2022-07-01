@@ -5,7 +5,6 @@
     2. n번째 피보나치 수 출력
 */
 #include <stdio.h>
-#include <stdlib.h>
 #define max 90
 
 int main (void)
@@ -21,9 +20,8 @@ int main (void)
 
     //2. 
     for(i = 2; i < n; i++)
-    {
         list[i] = list[i - 1] + list[i-2];
-    }
+
     printf("%lld", list[n-1]);
     return 0; 
 }
