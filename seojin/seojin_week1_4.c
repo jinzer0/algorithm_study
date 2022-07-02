@@ -7,7 +7,7 @@
     5. 첫째 줄에 그 합을, 둘째 줄에 그 중 최솟값 출력
 */
 #include <stdio.h>
-int prime(int k);//소수이면 0, 아니면 -1 반환
+int isPrime(int k);//소수이면 0, 아니면 -1 반환
 
 int main (void)
 {
@@ -18,10 +18,8 @@ int main (void)
     scanf("%d", &n);
 
     //2, 3
-    for (i = m; i <= n; i++)
-    {
-        if(prime(i) == 0) // 소수인 경우
-        {
+    for (i = m; i <= n; i++){
+        if(isPrime(i) == 0){ // 소수인 경우
             if (sum == 0){ //최솟값 저장
                min = i;
             }
@@ -40,12 +38,11 @@ int main (void)
     return 0;
 }
 
-int prime(int k) //소수이면 0, 아니면 -1 반환
+int isPrime(int k) //소수이면 0, 아니면 -1 반환
 {
     if (k == 1) return -1;
     if (k == 2) return 0;
-    for (int i = 2 ; i < k; i ++)
-    {
+    for (int i = 2 ; i < k; i ++){
         if ( k % i == 0) return -1;
     }
     return 0;
