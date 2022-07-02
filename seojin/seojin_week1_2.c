@@ -1,9 +1,3 @@
-/*
-    문제 10988번 [팰린드롬인지 확인하기]
-    1. 단어 입력 (1이상 100이하의 길이, 알파벳 소문자로만 이루어짐)
-    2. 팰린드롬인지 확인 >> 함수 사용
-    3. 팰린드롬이면 1, 아니면 0 출력
-*/
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
