@@ -1,4 +1,4 @@
-//hyeri1lee_week_1_4 <소수 찾기>
+//hyeri1lee_week_1_4_c <소수 찾기>
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
