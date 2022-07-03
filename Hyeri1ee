@@ -1,1 +1,39 @@
+//hyeri1lee_week_1_4 <소수 찾기>
 
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main(void)
+{
+	int sum =0,m, n, i, number,k=-1; //필요한 정수형 변수 설정
+	
+
+	printf("M과 N을 입력하시오(M<=N):"); //M값,N값 입력문구 출력
+	scanf("%d %d", &m, &n); //M값,N값 값 받기
+
+	int* num = (int*)malloc(sizeof(int) * (m - n + 1)); //소수로 판별된 수들 넣을 동적 배열 생성
+
+	for (n;n<m+1;n++) //소수 판별할 수
+	{
+		
+
+		for (i = 2; i < n; i++) //소수 판별
+		{
+			if (n % i == 0)
+			{
+				k++; //소수 배열 인덱스 증가
+				num[k] = n; //소수 배열에 넣기
+				sum += n; //소수의 합
+			}
+				
+					
+		}
+	}
+	printf("%d\n", sum);
+	printf("%d", num[0]);
+	return 0;
+}
+//왜 오류가 나는지 모르겠다...
