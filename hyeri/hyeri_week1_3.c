@@ -3,24 +3,24 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-//ÇÇº¸³ªÄ¡ ÇÔ¼ö ¼±¾ğ
+//í”¼ë³´ë‚˜ì¹˜ í•¨ìˆ˜ ì„ ì–¸
 int pibonaci(int k);
 
 int main(void)
 {
-	//º¯¼ö ¼±¾ğ
+	//ë³€ìˆ˜ ì„ ì–¸
 	int n;
 
-	scanf("%d", &n); //n°ª ÀÔ·Â
+	scanf("%d", &n); //nê°’ ì…ë ¥
 
-	printf("%d", pibonaci(n)); //ÇÇº¸³ªÄ¡ ÇÔ¼ö °á°ú Ãâ·Â
+	printf("%d", pibonaci(n)); //í”¼ë³´ë‚˜ì¹˜ í•¨ìˆ˜ ê²°ê³¼ ì¶œë ¥
 	return 0;
 }
 
-//ÇÇº¸³ªÄ¡ ÇÔ¼ö Á¤ÀÇ
+//í”¼ë³´ë‚˜ì¹˜ í•¨ìˆ˜ ì •ì˜
 int pibonaci(int k)
 {
-	//º¯¼ö ¼±¾ğ
+	//ë³€ìˆ˜ ì„ ì–¸
 	int result;
 
 	if (k <= 0)
@@ -29,6 +29,6 @@ int pibonaci(int k)
 		result = 1;
 	else
 		result = pibonaci(k - 2) + pibonaci(k - 1);
-	return result;  //Àç±ÍÇÔ¼ö ÀÌ¿ë
+	return result;  //ì¬ê·€í•¨ìˆ˜ ì´ìš©
 	
 }
