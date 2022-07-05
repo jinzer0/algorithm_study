@@ -41,7 +41,7 @@
 
 ## `commit` 방법 ✏️
 
--   이름_주차_몇번째문제_사용 언어
+-   이름_주차_몇번째문제_사용 언어  
     예시
     > jinyeong_week5_3_python  
     > jinyeong_week3_2_c
