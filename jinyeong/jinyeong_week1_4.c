@@ -4,14 +4,13 @@
 int is_prime(int); // 소수인지 판별하는 함수. 소수이면 1을 반환하고 소수가 아니면 0 반환
 
 int main(void) {
-    int M, N, is_exist = 0, min = -1, sum = 0;
+    int M, N, min = -1, sum = 0;
 
     scanf("%d\n%d", &M, &N);
     for (int i = M; i <= N; ++i) {
         if (is_prime(i)) { // 소수이면
-            if (!is_exist) { // 최솟값이 없으면
+            if (min == -1) { // 최솟값이 없으면
                 min = i; // 최솟값 저장
-                is_exist = 1; // 최솟값이 존재하므로 더 이상 최솟값을 갱신할 필요 없음
             }
             sum += i; // 소수 합 저장
         }
