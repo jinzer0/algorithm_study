@@ -7,18 +7,19 @@
 int main(void) {
     char expression[51], temp[6] = {0}, operator = '+';
     int sum = 0;
-    gets_s(expression, sizeof(expression));
-    for (int i = 0; i < strlen(expression); ++i) {
-        if (expression[i] == '+') {
-            if (operator == '+') sum += atoi(temp);
-            else if (operator == '-') sum -= atoi(temp);
+    gets_s(expression, sizeof(expression)); // 수식 입력 받기
+
+    for (int i = 0; i < strlen(expression); ++i) { //문자열 길이만큼 반복
+        if (expression[i] == '+') { // 수가 아닌 연산자 '+'를 만났을 때
+            if (operator == '+') sum += atoi(temp); // 이전 연산자 중 '-'가 없으면
+            else if (operator == '-') sum -= atoi(temp); // 이전 연산자 중 '-'가 있으면
+            memset(temp, 0, 6 * sizeof(char)); // 수를 저장할 temp 배열 '\0'으로 재할당
+        } else if (expression[i] == '-') { // 수가 아닌 연산자 '-'를 만났을 때
+            if (operator == '+') sum += atoi(temp); // 이전 연산자 중 '-'가 없으면
+            else if (operator == '-') sum -= atoi(temp); // 이전 연산자 중 '-'가 있으면
+            operator = '-'; // '-' 가 존재하게 되므로 이후의 연산자는 무의미
             memset(temp, 0, 6 * sizeof(char));
-        } else if (expression[i] == '-') {
-            if (operator == '+') sum += atoi(temp);
-            else if (operator == '-') sum -= atoi(temp);
-            operator = '-';
-            memset(temp, 0, 6 * sizeof(char));
-        } else strcat(temp, expression + i);
+        } else strcat(temp, expression + i); // 수인 경우 temp배열에 저장
     }
     printf("%d", sum);
     return 0;
