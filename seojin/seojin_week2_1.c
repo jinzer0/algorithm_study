@@ -11,7 +11,7 @@ int main(void)
 {
     // N, M, K 공백으로 구분하여 입력받기
     int n, m, k, buf, i, j, temp;
-    int first, second, count, result=0;
+    int count, result=0;
     int data[10000]; // N개의 수를 저장할 공간
     scanf("%d %d %d", &n, &m, &k);
 
@@ -33,15 +33,12 @@ int main(void)
         }
     }
 
-    first = data[n - 1]; // 가장 큰 수
-    second = data[n - 2]; //두 번째로 큰 수
-
     //가장 큰 수가 더해지는 횟수 계산
     count = (int)((m / (k + 1)) * k);
     count = count + m % (k + 1);
 
-    result = result + count * first;
-    result = result + (m - count) * second;
+    result = result + count *  data[n - 1]; // 가장 큰 수
+    result = result + (m - count) * data[n - 2];//두 번째로 큰 수
     printf("%d", result);
     return 0;
 }
