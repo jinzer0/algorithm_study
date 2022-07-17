@@ -4,88 +4,88 @@
 
 int main(void)
 {
-	int row, col, i, j; //¸Ê »ı¼ºÀ» À§ÇÑ º¯¼öµé
-	int x, y, direction; //ÇöÀç Ä³¸¯ÅÍ¿¡ ´ëÇÑ Á¤º¸¸¦ À§ÇÑ º¯¼öµé
-	int left_x, left_y; //Ä³¸¯ÅÍÀÇ ¿ŞÂÊ ¹æÇâÀÇ Á¤º¸¸¦ À§ÇÑ º¯¼öµé
-	int count = 0; // µ¿¼­³²ºÏ °Ë»ç È½¼ö
-	int result = 0; //¹æ¹®ÇÑ Ä­ÀÇ ¼ö ¼¼±â
+	int row, col, i, j; //ë§µ ìƒì„±ì„ ìœ„í•œ ë³€ìˆ˜ë“¤
+	int x, y, direction; //í˜„ì¬ ìºë¦­í„°ì— ëŒ€í•œ ì •ë³´ë¥¼ ìœ„í•œ ë³€ìˆ˜ë“¤
+	int left_x, left_y; //ìºë¦­í„°ì˜ ì™¼ìª½ ë°©í–¥ì˜ ì •ë³´ë¥¼ ìœ„í•œ ë³€ìˆ˜ë“¤
+	int count = 0; // ë™ì„œë‚¨ë¶ ê²€ì‚¬ íšŸìˆ˜
+	int result = 0; //ë°©ë¬¸í•œ ì¹¸ì˜ ìˆ˜ ì„¸ê¸°
 
-	scanf("%d %d", &row, &col); //°¡·Î ¼¼·Î Å©±â ÀÔ·Â
+	scanf("%d %d", &row, &col); //ê°€ë¡œ ì„¸ë¡œ í¬ê¸° ì…ë ¥
 
-	int** map; //ÀÌÂ÷¿ø µ¿ÀûÇÒ´ç »ı¼º
+	int** map; //ì´ì°¨ì› ë™ì í• ë‹¹ ìƒì„±
 	map = malloc(sizeof(int*) * row);
 	for (i = 0; i < row; i++)
 		map[i] = malloc(sizeof(int) * col);
 
-	scanf("%d %d %d", &x, &y, &direction);// Ä³¸¯ÅÍ Á¤º¸ ÀÔ·Â
-	for (i = 0; i < row; i++) //¸Ê Á¤º¸ ÀÔ·Â
+	scanf("%d %d %d", &x, &y, &direction);// ìºë¦­í„° ì •ë³´ ì…ë ¥
+	for (i = 0; i < row; i++) //ë§µ ì •ë³´ ì…ë ¥
 	{
 		for (j = 0; j < col; j++)
 			scanf(" %d", &map[i][j]);
 	}
 	
-	map[x][y] = -1; //°¡º»¶¥Àº -1, ¹Ù´Ù´Â 1, °¡º¸Áö ¾ÊÀº ¶¥Àº 0
+	map[x][y] = -1; //ê°€ë³¸ë•…ì€ -1, ë°”ë‹¤ëŠ” 1, ê°€ë³´ì§€ ì•Šì€ ë•…ì€ 0
 	result = result + 1;
 
-	while (1)//½Ã¹Ä·¹ÀÌ¼Ç ½ÃÀÛ
+	while (1)//ì‹œë®¬ë ˆì´ì…˜ ì‹œì‘
 	{
-		switch (direction) { //left_x, left_y¿¡ Ä³¸¯ÅÍÀÇ ¿ŞÂÊ ÁÂÇ¥ ÀúÀå
-		case 0: // ºÏ
+		switch (direction) { //left_x, left_yì— ìºë¦­í„°ì˜ ì™¼ìª½ ì¢Œí‘œ ì €ì¥
+		case 0: // ë¶
 			left_x = x - 1; left_y = y;
 			break;
-		case 1: //µ¿
+		case 1: //ë™
 			left_x = x; left_y = y + 1;
 			break;
-		case 2: //³²
+		case 2: //ë‚¨
 			left_x = x + 1; left_y = y;
 			break;
-		case 3://¼­
+		case 3://ì„œ
 			left_x = x; left_y = y - 1;
 			break;
 		}
-		if (map[left_x][left_y] == 0) //¹Ù´Ù°¡ ¾Æ´Ï°Å³ª ¾ÆÁ÷ °¡º¸Áö ¾ÊÀº Ä­ÀÌ¶ó¸é
+		if (map[left_x][left_y] == 0) //ë°”ë‹¤ê°€ ì•„ë‹ˆê±°ë‚˜ ì•„ì§ ê°€ë³´ì§€ ì•Šì€ ì¹¸ì´ë¼ë©´
 		{
-			if (direction == 0) direction = 3; // ¹æÇâ ÀüÈ¯
+			if (direction == 0) direction = 3; // ë°©í–¥ ì „í™˜
 			else direction = direction - 1;
-			x = left_x; y = left_y; //ÀÌµ¿
-			map[left_x][left_y] = -1; //°¡º» ¶¥À¸·Î º¯°æ
+			x = left_x; y = left_y; //ì´ë™
+			map[left_x][left_y] = -1; //ê°€ë³¸ ë•…ìœ¼ë¡œ ë³€ê²½
 			count = 0;
 			result = result + 1;
 		}
-		else if (map[left_x][left_y] != 0) //¹Ù´ÙÀÌ°Å³ª °¡º» ¶¥ÀÌ¶ó¸é
+		else if (map[left_x][left_y] != 0) //ë°”ë‹¤ì´ê±°ë‚˜ ê°€ë³¸ ë•…ì´ë¼ë©´
 		{
-			if (count == 4) //µ¿¼­³²ºÏ ¸ğµÎ °Ë»çÇß´Ù¸é
+			if (count == 4) //ë™ì„œë‚¨ë¶ ëª¨ë‘ ê²€ì‚¬í–ˆë‹¤ë©´
 			{
-				switch (direction) { //ÇÑ Ä­ µÚ·Î°¡±â
-				case 0: // ºÏ
+				switch (direction) { //í•œ ì¹¸ ë’¤ë¡œê°€ê¸°
+				case 0: // ë¶
 					x = x + 1; y = y;
 					break;
-				case 1: //µ¿
+				case 1: //ë™
 					x = x; y = y - 1;
 					break;
-				case 2: //³²
+				case 2: //ë‚¨
 					x = x - 1; y = y;
 					break;
-				case 3://¼­
+				case 3://ì„œ
 					x = x; y = y + 1;
 					break;
 				}
-				if (map[x][y] == 1) break; //¹Ù´Ù¶ó¸é Á¾·á (µÚ°¡ ¹Ù´Ù·Î ¸·ÇôÀÖ´Â °æ¿ì)
-				else if (map[x][y] == -1 ){ // ¹Ù´Ù°¡ ¾Æ´Ï¶ó °¡º» ¶¥ÀÌ¶ó¸é
+				if (map[x][y] == 1) break; //ë°”ë‹¤ë¼ë©´ ì¢…ë£Œ (ë’¤ê°€ ë°”ë‹¤ë¡œ ë§‰í˜€ìˆëŠ” ê²½ìš°)
+				else if (map[x][y] == -1 ){ // ë°”ë‹¤ê°€ ì•„ë‹ˆë¼ ê°€ë³¸ ë•…ì´ë¼ë©´
 					result = result + 1;
 					count = 0;
 				}
 			}
-			else
+			else //ê²€ì‚¬í•  ë°©í–¥ì´ ë‚¨ì€ ìƒí™© > ë°©í–¥ ì „í™˜ í›„ ë‹¤ì‹œ ê²€ì‚¬ ì§„í–‰
 			{
 				count++;
-				if (direction == 0) direction = 3; // ¹æÇâ ÀüÈ¯
+				if (direction == 0) direction = 3; // ë°©í–¥ ì „í™˜ 
 				else direction = direction - 1;
 			}
 		}
 	}
-	printf("%d", result); //°á°ú Ãâ·Â
-	for (i = 0; i < row; i++) //µ¿Àû ÇÒ´ç ÇØÀç
+	printf("%d", result); //ê²°ê³¼ ì¶œë ¥
+	for (i = 0; i < row; i++) //ë™ì  í• ë‹¹ í•´ì¬
 		free(map[i]);
 	free(map);
 	return 0;
