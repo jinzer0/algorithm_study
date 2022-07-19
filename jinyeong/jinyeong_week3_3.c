@@ -1,4 +1,4 @@
-// BOJ 1541 : "잃어버린 괄호"
+// BOJ 1292 : "쉽게 푸는 문제"
 #include <stdio.h>
 
 int main(void) {
