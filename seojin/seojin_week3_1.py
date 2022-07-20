@@ -1,3 +1,4 @@
+#
 #넘파이 사용
 import numpy as np
 count = 0 #이동 경우의 수 (결과값)
