@@ -72,6 +72,7 @@
 | 1 | 연습 문제 | [수 정렬하기](https://www.acmicpc.net/problem/2750), [팰린드롬인지 확인하기](https://www.acmicpc.net/problem/10988), [피보나치 수 2](https://www.acmicpc.net/problem/2748), [소수 찾기](https://www.acmicpc.net/problem/2581) |
 | 2 | 그리디 |  큰 수의 법칙(p92), 숫자 카드 게임(p96), 1이 될 때까지(p99), [잃어버린 괄호](https://www.acmicpc.net/problem/1541) |
 | 3 | 구현 | 왕실의 나이트(p115), 게임 개발(p118), [쉽게 푸는 문제](https://www.acmicpc.net/problem/1292), [회문(팰린드롬)](https://www.acmicpc.net/problem/17609) |
+| 4 | DFS/BFS | 음료수 얼려 먹기(p149), 미로 탈출(p152), [DFS와 BFS](https://www.acmicpc.net/problem/1260) |
    
 </br>
    
