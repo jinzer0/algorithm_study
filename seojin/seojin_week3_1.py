@@ -11,3 +11,4 @@ for i in range (8):
     if result[i][0] > 0 and result[i][0] < 9 and result[i][1] > 0 and result[i][1] <9: #결과가 맵을 벗어나지 않는 경우
         count += 1
 print(count)
+#

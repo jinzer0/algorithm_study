@@ -3,15 +3,16 @@
 
 int main(void)
 {
-	int A, B, list, count = 1, result = 0, i; //A, B, list´Â ¼ö¿­ÀÇ ÀÎµ¦½º, count´Â ¼ö¿­ÀÇ Ç× ÀÇ¹Ì
+	int A, B, list, count = 1, result = 0, i; //A, B, listëŠ” ìˆ˜ì—´ì˜ ì¸ë±ìŠ¤, countëŠ” ìˆ˜ì—´ì˜ í•­ ì˜ë¯¸
 	scanf("%d %d", &A, &B);
  
-	for (list = 1; list <= B; count++){ // ¼ö¿­ÀÇ Ã¹¹øÂ° Ç×ºÎÅÍ B¹øÂ° Ç×±îÁö ¹İº¹¹® ÁøÇà
-		for (i = 0; i < count; i++){ // count¸¦ count¹ø ´õÇÑ´Ù
-			if ((list >= A) && (list<=B)) result = result + count; //¼³Á¤ ¹üÀ§ ¾ÈÀÇ ÀÎµ¦½ºÀÏ °æ¿ì result¿¡ °ª ÀúÀå
-			list++; //¼³Á¤¹üÀ§ ¾È, ¹Û ¸ğµç °æ¿ì¿¡ Ç×ÀÇ ÀÎµ¦½º´Â Áõ°¡
+	for (list = 1; list <= B; count++){ // ìˆ˜ì—´ì˜ ì²«ë²ˆì§¸ í•­ë¶€í„° Bë²ˆì§¸ í•­ê¹Œì§€ ë°˜ë³µë¬¸ ì§„í–‰
+		for (i = 0; i < count; i++){ // countë¥¼ countë²ˆ ë”í•œë‹¤
+			if ((list >= A) && (list<=B)) result = result + count; //ì„¤ì • ë²”ìœ„ ì•ˆì˜ ì¸ë±ìŠ¤ì¼ ê²½ìš° resultì— ê°’ ì €ì¥
+			list++; //ì„¤ì •ë²”ìœ„ ì•ˆ, ë°– ëª¨ë“  ê²½ìš°ì— í•­ì˜ ì¸ë±ìŠ¤ëŠ” ì¦ê°€
 		}
 	}
 	printf("%d", result);
 	return 0;
 }
+//
